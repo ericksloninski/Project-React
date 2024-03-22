@@ -47,7 +47,11 @@ function App() {
 
   const novoColaborador = (colaborador) => {
 
+<<<<<<< HEAD
     console.log(colaborador)
+=======
+    // console.log(colaborador)
+>>>>>>> 946a77ad3162e72686085f766679ad12d115dbfb
     setColaboradores([...colaboradores, colaborador])
 
   }
@@ -57,7 +61,17 @@ function App() {
       <Banner/>
       <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => novoColaborador(colaborador)}/>
       
+<<<<<<< HEAD
       {times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>)}
+=======
+      {times.map(time => <Time
+         key={time.nome}
+         nome={time.nome} 
+         corPrimaria={time.corPrimaria} 
+         corSecundaria={time.corSecundaria}
+         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        />)}
+>>>>>>> 946a77ad3162e72686085f766679ad12d115dbfb
       
     </div>
   );
